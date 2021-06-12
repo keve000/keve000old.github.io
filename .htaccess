@@ -1,0 +1,10 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+AuthUserFile /private/.htpasswd
+AuthGroupFile /dev/null
+AuthName "パスワードとIDを入力してください"
+AuthType Basic
+require valid-user 
+ErrorDocument 404 null.html
+order deny,allow
